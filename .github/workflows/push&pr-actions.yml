@@ -1,5 +1,0 @@
-Create two jobs inside a new workflow
-When you have a push, execute both job
-When you have a PR, execute only the first job.
-Create a dev branch, and inside it create a dummy change.txt file. Put your name in it. Publish this branch
-Create a pull request from the dev branch to main. You should see the first job executing directly inside the PR (from the github UI)
