@@ -1,0 +1,17 @@
+name: Node project group 2 - When you have a push on the branch "dev" only
+  
+run-name: ${{ github.actor }} pushed on dev
+on: [push, pull_request]
+jobs:
+  job1:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - id: step1
+        run: echo "test=hello from job 1"
+      
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - id: step2
+        run: echo "test=world from job 2"

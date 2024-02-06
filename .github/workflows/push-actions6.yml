@@ -1,10 +1,10 @@
-name: Node project group 2 - When you have a push on the branch "dev" only
+name: Node project group 2 - When a specific folder have been modified
   
 run-name: ${{ github.actor }} pushed on dev
 on: 
   push:
-    branches:
-      - 'dev'
+    paths:
+      - 'controllers/*' 
 jobs:
   call-reusable-workflow:
     uses: ./.github/workflows/reusable_workflow.yml
