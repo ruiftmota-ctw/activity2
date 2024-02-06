@@ -3,7 +3,8 @@ name: Node project group 2
 
 run-name: ${{ github.actor }} Workflow group 2
 
-on: [push]
+on:
+  workflow_call:
 
 jobs:
   build:
